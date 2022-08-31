@@ -1,7 +1,7 @@
 # TracHard
 
 步骤有些繁琐
-PS:并没有shuffle的方式，避免了图像号码可能错位或者对不上。基本都是在原train_loader下操作。
+PS:有些地方写死了，复用性不够好，另外并没有shuffle的方式，避免了图像号码可能错位或者对不上。基本都是在原train_loader下操作提取。
 
 第一步：正常训练保存检查点，order_examples.py统计出那些一直错误的数据
 第二步：forget_pic.py从test_loader中提取出第一步中找到的hard sample，方便下一步计算tracin值
